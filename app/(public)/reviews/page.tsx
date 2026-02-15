@@ -1,33 +1,32 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const dynamic = "force-dynamic"
-
+export const dynamic = "force-dynamic";
 
 import { connectDB } from "@/app/lib/mongodb";
 import { Review } from "@/app/models/Review";
 import { Reviews } from "@/components/marketing/Testimonials";
-import { Star,  } from "lucide-react";
-import "@/app/models/Booking"
-import "@/app/models/Service"
+import { Star } from "lucide-react";
+import "@/app/models/Booking";
+import "@/app/models/Service";
 
 async function getReviews() {
   await connectDB();
-  
+
   // Populate the booking field and then populate service inside booking
   const reviews = await Review.find()
     .populate({
-      path: 'booking',
-      model: 'Booking',
-      select: 'customerName service scheduledAt phone pickupLocation',
+      path: "booking",
+      model: "Booking",
+      select: "customerName service scheduledAt phone pickupLocation",
       populate: {
-        path: 'service',
-        model: 'Service',
-        select: 'name'
-      }
+        path: "service",
+        model: "Service",
+        select: "name",
+      },
     })
     .sort({ createdAt: -1 })
     .limit(20)
     .lean(); // Use lean() for better performance
-  
+
   // Convert MongoDB documents to plain objects
   return JSON.parse(JSON.stringify(reviews));
 }
@@ -36,9 +35,15 @@ export default async function ReviewsPage() {
   const reviews = await getReviews();
 
   // Calculate average rating
-  const avgRating = reviews.length > 0 
-    ? (reviews.reduce((acc: number, review: any) => acc + (review.rating || 5), 0) / reviews.length).toFixed(1)
-    : "5.0";
+  const avgRating =
+    reviews.length > 0
+      ? (
+          reviews.reduce(
+            (acc: number, review: any) => acc + (review.rating || 5),
+            0,
+          ) / reviews.length
+        ).toFixed(1)
+      : "5.0";
 
   const ratingCounts = {
     5: reviews.filter((r: any) => (r.rating || 5) === 5).length,
@@ -66,7 +71,9 @@ export default async function ReviewsPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Average Rating */}
             <div className="text-center md:text-left">
-              <div className="text-6xl font-bold text-blue-600 mb-2">{avgRating}</div>
+              <div className="text-6xl font-bold text-blue-600 mb-2">
+                {avgRating}
+              </div>
               <div className="flex justify-center md:justify-start gap-1 mb-2">
                 {[...Array(5)].map((_, i) => (
                   <Star
@@ -91,7 +98,7 @@ export default async function ReviewsPage() {
                     <div
                       className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
                       style={{
-                        width: `${(ratingCounts[rating as keyof typeof ratingCounts] / reviews.length) * 100}%`
+                        width: `${(ratingCounts[rating as keyof typeof ratingCounts] / reviews.length) * 100}%`,
                       }}
                     />
                   </div>
@@ -105,12 +112,9 @@ export default async function ReviewsPage() {
         </div>
 
         {/* Filters */}
-       
 
         {/* Reviews Grid */}
-     <Reviews reviews={reviews} showService showDate />
-
-      
+        <Reviews reviews={reviews} showService showDate />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ export interface ServiceCardProps {
 
 export const ServiceCard = ({ service }: ServiceCardProps) => {
   const { name, description, basePrice, isActive } = service
-
+console.log("Rendering ServiceCard for:", name, { basePrice, isActive })
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-blue-200 transition-all duration-200">
       {/* Header with status badge */}
@@ -35,8 +35,8 @@ export const ServiceCard = ({ service }: ServiceCardProps) => {
         <div className="flex items-baseline gap-1">
           {basePrice ? (
             <>
-              <span className="text-2xl font-bold text-blue-600">${basePrice}</span>
-              <span className="text-xs text-gray-400 ml-1">/project</span>
+              <span className="text-2xl font-bold text-blue-600">Ksh{basePrice}</span>
+              <span className="text-xs text-gray-400 ml-1">/Service</span>
             </>
           ) : (
             <span className="text-sm text-gray-400">Custom pricing</span>
