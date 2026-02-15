@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+export const dynamic = "force-dynamic"
+
 import Link from "next/link";
 import { connectDB } from "../lib/mongodb";
 import { Service } from "../models/Service";
