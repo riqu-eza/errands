@@ -59,14 +59,7 @@ export const Reviews = ({ reviews, showService = false, showDate = false, varian
     return (
       <section className="py-16 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              What Our Customers Say
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Real reviews from real people in Nairobi
-            </p>
-          </div>
+         
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {approvedReviews.map((review) => (
