@@ -50,7 +50,7 @@ export default function ReviewsPage() {
         ).toFixed(1)
       : "5.0";
 
-  const ratingCounts = {
+  const ratingCounts: Record<number, number> = {
     5: reviews.filter((r) => (r.rating || 5) === 5).length,
     4: reviews.filter((r) => r.rating === 4).length,
     3: reviews.filter((r) => r.rating === 3).length,
@@ -64,7 +64,7 @@ export default function ReviewsPage() {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Customer Reviews
           </h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -105,7 +105,7 @@ export default function ReviewsPage() {
                   <span className="w-8 text-sm">{rating}★</span>
                   <div className="flex-1 h-2 bg-gray-200 rounded">
                     <div
-                      className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
+                      className="h-full bg-linear-to-r from-blue-500 to-purple-500"
                       style={{
                         width: `${
                           reviews.length
