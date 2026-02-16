@@ -8,7 +8,6 @@ import {
   CheckCircle, 
   XCircle, 
   Search, 
-  Filter,
   RefreshCw,
   User,
   Calendar,
@@ -17,7 +16,6 @@ import {
   ThumbsDown,
   MoreVertical,
   AlertCircle,
-  CheckCheck,
   Clock
 } from "lucide-react"
 
@@ -250,7 +248,7 @@ export default function AdminReviewsPage() {
                 <div className="p-6 pb-4">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-start gap-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-lg">
+                      <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-lg">
                         {review.userName?.charAt(0) || 'U'}
                       </div>
                       <div>
@@ -274,7 +272,7 @@ export default function AdminReviewsPage() {
 
                   {/* Review Content */}
                   <p className="text-gray-700 leading-relaxed line-clamp-3">
-                    "{review.comment}"
+                    &#34;{review.comment}&#34;
                   </p>
 
                   {/* Booking Reference if exists */}
@@ -420,7 +418,7 @@ export default function AdminReviewsPage() {
                 <h4 className="text-sm font-medium text-gray-500 mb-3">Customer Information</h4>
                 <div className="bg-gray-50 rounded-xl p-4">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-lg">
+                    <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-lg">
                       {selectedReview.userName?.charAt(0) || 'U'}
                     </div>
                     <div>
@@ -461,7 +459,7 @@ export default function AdminReviewsPage() {
                 <h4 className="text-sm font-medium text-gray-500 mb-3">Review</h4>
                 <div className="bg-gray-50 rounded-xl p-4">
                   <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-                    "{selectedReview.comment}"
+                    &#34;{selectedReview.comment}&#34;
                   </p>
                 </div>
               </div>

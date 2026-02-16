@@ -2,7 +2,9 @@
 import { connectDB } from "@/app/lib/mongodb"
 import { Review } from "@/app/models/Review"
 import { NextResponse } from "next/server"
-
+import "@/app/models/Review";
+import "@/app/models/Booking";
+import "@/app/models/Service";
 export async function GET(req: Request) {
   try {
     await connectDB();

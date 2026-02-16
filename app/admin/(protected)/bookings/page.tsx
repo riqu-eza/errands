@@ -273,7 +273,7 @@ export default function AdminBookingsPage() {
                       <tr key={booking._id} className="hover:bg-gray-50 transition-colors">
                         <td className="px-6 py-4">
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                            <div className="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold shrink-0">
                               {booking.customerName?.charAt(0) || '?'}
                             </div>
                             <div>
@@ -285,7 +285,7 @@ export default function AdminBookingsPage() {
                               {booking.email && (
                                 <div className="flex items-center gap-2 text-sm text-gray-500 mt-1">
                                   <Mail className="w-3 h-3" />
-                                  <span className="truncate max-w-[150px]">{booking.email}</span>
+                                  <span className="truncate max-w-37.5">{booking.email}</span>
                                 </div>
                               )}
                             </div>
@@ -295,7 +295,7 @@ export default function AdminBookingsPage() {
                           <div className="font-medium text-gray-900">
                             {booking.service?.name || 'N/A'}
                           </div>
-                          <div className="text-sm text-gray-500 line-clamp-2 max-w-[200px]">
+                          <div className="text-sm text-gray-500 line-clamp-2 max-w-50">
                             {booking.description}
                           </div>
                         </td>
@@ -311,13 +311,13 @@ export default function AdminBookingsPage() {
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex items-center gap-2 text-sm text-gray-600">
-                            <MapPin className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                            <span className="truncate max-w-[150px]">{booking.pickupLocation}</span>
+                            <MapPin className="w-4 h-4 text-gray-400 shrink-0" />
+                            <span className="truncate max-w-37.5">{booking.pickupLocation}</span>
                           </div>
                           {booking.dropoffLocation && (
                             <div className="flex items-center gap-2 text-sm text-gray-600 mt-1">
-                              <MapPin className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                              <span className="truncate max-w-[150px]">→ {booking.dropoffLocation}</span>
+                              <MapPin className="w-4 h-4 text-gray-400 shrink-0" />
+                              <span className="truncate max-w-37.5">→ {booking.dropoffLocation}</span>
                             </div>
                           )}
                         </td>

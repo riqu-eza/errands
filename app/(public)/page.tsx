@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Hero } from "@/components/marketing/Hero";
-import { ArrowRight, Star, Phone } from "lucide-react";
+import { ArrowRight,  Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { ServiceCard } from "@/components/marketing/ServiceCard";
 import { Reviews } from "@/components/marketing/Testimonials";
@@ -84,7 +84,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-linear-to-b from-white to-gray-50">
       <div className="px-6 py-8 max-w-7xl mx-auto">
         <Hero />
 
@@ -138,7 +138,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white">
+        <section className="bg-linear-to-br from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Save Time?</h2>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -149,7 +149,7 @@ export default function HomePage() {
             </Link>
 
             <Link href="/contact">
-              <Button className="border-white text-white px-8 py-6 hover:bg-white/10">
+              <Button className="border-white text-white px-8 py-6 flex hover:bg-white/10">
                 <Phone className="w-5 h-5 mr-2" />
                 Contact Us
               </Button>

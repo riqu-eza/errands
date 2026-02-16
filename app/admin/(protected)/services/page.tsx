@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/immutability */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import { useEffect, useState } from "react"
-import { PlusCircle, Edit2, Trash2, Power, Save, X, DollarSign, AlertCircle } from "lucide-react"
+import { PlusCircle, Edit2, Trash2, Power, Save, X,  AlertCircle } from "lucide-react"
 
 export default function AdminServicesPage() {
   const [services, setServices] = useState<any[]>([])
@@ -257,7 +258,7 @@ export default function AdminServicesPage() {
                     <td colSpan={5} className="px-6 py-12 text-center text-gray-500">
                       <AlertCircle className="w-12 h-12 mx-auto mb-3 text-gray-400" />
                       <p className="text-lg font-medium">No services found</p>
-                      <p className="text-sm">Click "Add New Service" to create your first service.</p>
+                      <p className="text-sm">Click &#34;Add New Service&#34; to create your first service.</p>
                     </td>
                   </tr>
                 ) : (
