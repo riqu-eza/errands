@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -131,11 +132,11 @@ export default function BookPage() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-blue-600 to-purple-600 bg-clip-text text-transparent">
             Book an Errand
           </h1>
           <p className="text-gray-600 text-lg">
-            Tell us what you need done, and we'll handle the rest
+            Tell us what you need done, and we&#34;ll handle the rest
           </p>
         </div>
 
@@ -184,7 +185,7 @@ export default function BookPage() {
                 </option>
                 {services.map((service) => (
                   <option key={service._id} value={service._id}>
-                    {service.name} {service.basePrice ? `- $${service.basePrice}` : ''}
+                    {service.name} {service.basePrice ? `- Ksh${service.basePrice}` : ''}
                   </option>
                 ))}
               </select>
