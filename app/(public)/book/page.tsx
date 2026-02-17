@@ -141,7 +141,7 @@ export default function BookPage() {
         </div>
 
         {/* Progress Steps */}
-        <div className="flex justify-between items-center mb-8 px-4">
+        {/* <div className="flex justify-between items-center mb-8 px-4">
           {["Details", "Schedule", "Confirm"].map((step, index) => (
             <div key={step} className="flex items-center">
               <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
@@ -152,10 +152,10 @@ export default function BookPage() {
               {index < 2 && <div className="w-12 h-0.5 bg-gray-200 mx-2"></div>}
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Main Form */}
-        <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-6 md:p-8 space-y-6">
+        <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl text-gray-500 p-6 md:p-8 space-y-6">
           {error && (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
               <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
@@ -164,7 +164,7 @@ export default function BookPage() {
           )}
 
           {/* Service Selection - Now from Database */}
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             <h2 className="text-xl font-semibold flex items-center gap-2">
               <Package className="w-5 h-5 text-blue-600" />
               Select Service
