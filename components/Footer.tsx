@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Link from "next/link";
 import { 
   Mail, 
@@ -38,7 +39,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-gray-300 mt-20">
+    <footer className="bg-linear-to-b from-gray-900 to-gray-950 text-gray-300 mt-20">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
@@ -120,27 +121,27 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-lg mb-4">Get in Touch</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-gray-400">Call us anytime</p>
                   <Link href="tel:+254700000000" className="text-white hover:text-blue-400 transition-colors">
-                    +254 700 000 000
+                    +254 112 595 433
                   </Link>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                <Mail className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-gray-400">Email us</p>
                   <Link href="mailto:hello@errandpro.co.ke" className="text-white hover:text-blue-400 transition-colors">
-                    hello@errandpro.co.ke
+                    benedictliloe85@gmail.com
                   </Link>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-gray-400">Visit us</p>
                   <p className="text-white">
@@ -151,7 +152,7 @@ export default function Footer() {
               </div>
 
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                <Clock className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-gray-400">Working hours</p>
                   <p className="text-white">

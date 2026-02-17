@@ -25,8 +25,8 @@ export default function ContactPage() {
       <h1 className="text-2xl font-light mb-8 text-gray-900">Contact</h1>
       
       <div className="space-y-6 mb-12 text-sm text-gray-600">
-        <p>hello@errandpro.co.ke</p>
-        <p>+254 700 000 000</p>
+        <p>benedictliloe85@gmail.com</p>
+        <p>+254 112595433</p>
         <p>Nairobi, Kenya</p>
       </div>
 

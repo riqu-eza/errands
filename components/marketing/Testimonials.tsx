@@ -57,7 +57,7 @@ export const Reviews = ({ reviews, showService = false, showDate = false, varian
   // Grid Layout (Default)
   if (variant === "grid") {
     return (
-      <section className="py-16 px-6 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-6 bg-linear-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
          
 
@@ -79,7 +79,7 @@ export const Reviews = ({ reviews, showService = false, showDate = false, varian
 
                 {/* Customer Info */}
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                  <div className="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
                     {review.booking?.customerName?.charAt(0) || 'C'}
                   </div>
                   <div>
@@ -118,7 +118,7 @@ export const Reviews = ({ reviews, showService = false, showDate = false, varian
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                  <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
                     {review.booking?.customerName?.charAt(0) || 'C'}
                   </div>
                   <div>
@@ -207,7 +207,7 @@ export const FeaturedReviews = ({ reviews }: Props) => {
             &#34;{review.comment}&#34;
           </p>
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            <div className="w-12 h-12 bg-linear-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
               {review.booking?.customerName?.charAt(0) || 'C'}
             </div>
             <div>
