@@ -1,13 +1,12 @@
-import { ReactNode } from "react"
-import Link from "next/link"
+import { ReactNode } from "react";
+import Link from "next/link";
+import PushNotificationSetup from "@/components/PushNotificationSetup";
 
-export default function AdminLayout({
-  children,
-}: {
-  children: ReactNode
-}) {
+export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen flex bg-gray-50">
+      <PushNotificationSetup />
+
       <aside className="w-64 bg-white border-r p-6">
         <h2 className="text-xl text-black font-bold mb-8">Admin Panel</h2>
 
@@ -19,13 +18,11 @@ export default function AdminLayout({
         </nav>
 
         <form action="/api/admin/logout" method="POST" className="mt-10">
-          <button className="text-red-500 text-sm">
-            Logout
-          </button>
+          <button className="text-red-500 text-sm">Logout</button>
         </form>
       </aside>
 
       <main className="flex-1 p-10">{children}</main>
     </div>
-  )
+  );
 }

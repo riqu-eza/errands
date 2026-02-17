@@ -273,7 +273,7 @@ export default function AdminServicesPage() {
                       <td className="px-6 py-4">
                         {service.basePrice ? (
                           <div className="text-sm font-medium text-gray-900">
-                            ${service.basePrice.toLocaleString()}
+                            Ksh{service.basePrice.toLocaleString()}
                           </div>
                         ) : (
                           <span className="text-sm text-gray-400">—</span>
