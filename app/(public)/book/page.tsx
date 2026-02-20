@@ -89,7 +89,7 @@ export default function BookPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-16 px-4">
+      <div className="min-h-screen bg-linear-to-b from-blue-50 to-white py-16 px-4">
         <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-8 text-center">
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-green-500" />
@@ -128,7 +128,7 @@ export default function BookPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16 px-4">
+    <div className="min-h-screen bg-linear-to-b from-gray-50 to-white py-16 px-4">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
@@ -158,7 +158,7 @@ export default function BookPage() {
         <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl text-gray-500 p-6 md:p-8 space-y-6">
           {error && (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
               <p className="text-red-700 text-sm">{error}</p>
             </div>
           )}
@@ -364,7 +364,7 @@ export default function BookPage() {
           <button
             type="submit"
             disabled={loading || fetchingServices || services.length === 0}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full bg-linear-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {loading ? (
               <>

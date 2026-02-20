@@ -21,7 +21,7 @@ export default function Navbar() {
     { href: "/services", label: "Services", icon: ShoppingBag },
     { href: "/about", label: "About" },
     { href: "/reviews", label: "Reviews" },
-    { href: "/contact", label: "Contact", icon: Phone },
+    // { href: "/contact", label: "Contact", icon: Phone },
   ];
 
   return (
