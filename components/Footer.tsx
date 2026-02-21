@@ -130,7 +130,7 @@ export default function Footer() {
                 </div>
               </div>
               
-              <div className="flex items-start gap-3">
+              {/* <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-gray-400">Email us</p>
@@ -138,7 +138,7 @@ export default function Footer() {
                     benedictliloe85@gmail.com
                   </Link>
                 </div>
-              </div>
+              </div> */}
               
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
