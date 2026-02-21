@@ -130,15 +130,7 @@ export default function Footer() {
                 </div>
               </div>
               
-              {/* <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm text-gray-400">Email us</p>
-                  <Link href="mailto:hello@errandpro.co.ke" className="text-white hover:text-blue-400 transition-colors">
-                    benedictliloe85@gmail.com
-                  </Link>
-                </div>
-              </div> */}
+             
               
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
